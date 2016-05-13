@@ -54,6 +54,14 @@ public class Post
     }
     
     /**
+     * Devuelve el nombre del autor del post 
+     */
+    public String getAuthor()
+    {
+        return username;
+    }
+    
+    /**
      * Metodo que muestra toda la info del post
      */
     public void display(){
