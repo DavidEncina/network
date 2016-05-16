@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class MessagePost extends Post
 {
     private String message;
+    private ArrayList<String> comments;
 
     /**
      * Constructor for objects of class MessagePost
@@ -17,7 +18,15 @@ public class MessagePost extends Post
     {
        super(author);
        this.message = text;
+       comments = new ArrayList<>();
     }
+    
+    /**
+     * Metodo para añadir un comentario al post
+     */
+    public void addComment(String text){
+        comments.add(text);
+    }   
 
     /**
      * Metodo que devuelve el mensaje del post

@@ -10,8 +10,7 @@ public class Post
 {
     private String username;
     private long timestamp;
-    private int likes;
-    private ArrayList<String> comments;
+    private int likes;    
 
     /**
      * Constructor for objects of class Post
@@ -20,8 +19,7 @@ public class Post
     {
         username = author;
         timestamp = System.currentTimeMillis();
-        likes = 0;
-        comments = new ArrayList<>();
+        likes = 0;        
     }
 
     /**
@@ -37,14 +35,7 @@ public class Post
     public void unlike(){
         if(likes != 0)
            likes--; 
-    }
-    
-    /**
-     * Metodo para añadir un comentario al post
-     */
-    public void addComment(String text){
-        comments.add(text);
-    }
+    }   
     
     /**
      * Metodo que devuelve la estampa de tiempo en el momento de crear el post
@@ -69,12 +60,7 @@ public class Post
         long time = System.currentTimeMillis() - getTimeStamp();
         info += username + "\n=====================\n" + "Posted: ";
         info += timeString(time);
-        info += "_____________________\nLikes: " + likes + "\n=====================\n\n";
-        if(comments.size() != 0)
-            for(int i=0; i<comments.size(); i++)
-                info += comments.get(i) + "\n_____________________\n";
-        else
-            info += "Sin comentarios";
+        info += "_____________________\nLikes: " + likes + "\n=====================\n\n";        
         System.out.println(info);
     }
     
